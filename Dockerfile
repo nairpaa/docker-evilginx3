@@ -11,6 +11,9 @@ WORKDIR /app/evilginx2
 # Build Evilginx2 form source
 RUN go build
 
+# Install jq and vim
+RUN apt-get update && apt-get install -y jq vim
+
 # Port to be exposed
 EXPOSE 443 80
 
