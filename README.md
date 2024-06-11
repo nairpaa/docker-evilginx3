@@ -10,3 +10,10 @@ cd docker-evilginx3
 docker build -t evilginx3 .
 docker run --restart=always -it -d -p 443:443 -p 80:80 evilginx2
 ```
+
+## Run remotely
+
+```bash
+docker pull nairpaa/evilginx3:latest
+docker run --restart=always -it -d -p 443:443 -p 80:80 evilginx2
+```
