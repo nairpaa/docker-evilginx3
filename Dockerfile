@@ -1,19 +1,19 @@
-# Menggunakan base image Go official dari Docker Hub
+# Using the official Go base image from Docker Hub
 FROM golang:latest
 
-# Set working directory di dalam container
+# Set working directory in the container
 WORKDIR /app
 
-# Clone repositori Evilginx2
+# Clone Evilginx2 repository
 RUN git clone https://github.com/nairpaa/evilginx2.git
 WORKDIR /app/evilginx2
 
-# Build Evilginx2 dari source
+# Build Evilginx2 form source
 RUN go build
 
-# Port yang akan diexpose
+# Port to be exposed
 EXPOSE 443 80
 
-# Perintah untuk menjalankan Evilginx2
+# Rim Evilginx2
 CMD ["./evilginx2"]
 
